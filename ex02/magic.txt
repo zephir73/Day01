@@ -1,0 +1,1 @@
+awk '$1 ~/Officer/ {print}' tcpd_department.csv | awk '$1 ~/8/ {print}' |cat >> tcpd_expert_officer.txt
