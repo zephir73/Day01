@@ -10,7 +10,7 @@ grep -R CLUE mystery > clues.txt
 # Found the suspects that has all the 4 id cards found (CLUE:2)
 cat mystery/memberships/Museum_of_Bash_History \
 mystery/memberships/Terminal_City_Library \
-mystery/memberships/Delta_SkyMiles\
+mystery/memberships/Delta_SkyMiles \
 mystery/memberships/AAA \
 | sort \
 | uniq -c \
@@ -55,8 +55,8 @@ echo "FINAL INTERVIEW ----"
 cat mystery/interviews/interview-9620713
 echo "--------------------"
 
-#grep -qi $(md5sum ultimate_suspect.txt | cut -d ' ' -f1) encoded \
-#&& echo CORRECT\! GREAT WORK, GUMSHOE. \
-#|| echo SORRY, TRY AGAIN.
+grep -qi $(md5sum ultimate_suspect.txt | cut -d ' ' -f1) encoded \
+&& echo CORRECT\! GREAT WORK, GUMSHOE. \
+|| echo SORRY, TRY AGAIN.
 
 echo "Murder: " $(cat ultimate_suspect.txt)
