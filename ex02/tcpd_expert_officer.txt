@@ -1,1 +1,1 @@
-Cameron,Officer,8
+awk '$1 ~/Officer/ {print}' tcpd_department.csv | awk '$1 ~/8/ {print}' 

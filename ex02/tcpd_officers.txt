@@ -1,2 +1,1 @@
-Cameron,Officer,8
-Preston,Officer,6
+awk '$1 ~/Officer/ {print}' tcpd_department.csv
